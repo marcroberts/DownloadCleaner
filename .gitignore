@@ -3,3 +3,6 @@ build/
 DerivedData/
 *.pbxuser
 xcuserdata/
+
+Product/
+Archive/
