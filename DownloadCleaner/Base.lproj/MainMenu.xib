@@ -15,21 +15,25 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="emE-US-PyF" customClass="StatusMenuController" customModule="DownloadCleaner" customModuleProvider="target">
             <connections>
+                <outlet property="lastRan" destination="3sx-Wt-pmh" id="U2y-Fb-sBc"/>
                 <outlet property="statusMenu" destination="NeM-7n-HoP" id="vnc-mQ-Uex"/>
             </connections>
         </customObject>
         <customObject id="qF6-jy-5Q8" customClass="SUUpdater"/>
         <menu id="NeM-7n-HoP">
             <items>
-                <menuItem title="Last run at" enabled="NO" id="3sx-Wt-pmh">
+                <menuItem title="Last ran: never" enabled="NO" id="3sx-Wt-pmh">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="3Xm-mQ-sIB"/>
                 <menuItem title="Preferences" enabled="NO" id="3zv-yK-zLc">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem title="Check for updates..." enabled="NO" id="fA6-OZ-2oV">
+                <menuItem title="Check for updates" id="fA6-OZ-2oV">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="qF6-jy-5Q8" id="OC4-I2-V8d"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="jSb-O2-9dz"/>
                 <menuItem title="Quit" id="Qba-Jq-Wsw">
