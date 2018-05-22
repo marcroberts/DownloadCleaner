@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		428772C93C4F365CF205D93C /* Pods_DownloadCleaner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F79A1BBE7C90774E7BA0A22 /* Pods_DownloadCleaner.framework */; };
-		4938270620B4181B00E0EEB8 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4938270520B4181B00E0EEB8 /* Podfile */; };
 		496AB70320B31F4C000FF8E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496AB70220B31F4C000FF8E0 /* AppDelegate.swift */; };
 		496AB70520B31F4E000FF8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 496AB70420B31F4E000FF8E0 /* Assets.xcassets */; };
 		496AB70820B31F4E000FF8E0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496AB70620B31F4E000FF8E0 /* MainMenu.xib */; };
@@ -17,7 +16,6 @@
 
 /* Begin PBXFileReference section */
 		1E7078FE409A4B50B8F49A47 /* Pods-DownloadCleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadCleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadCleaner/Pods-DownloadCleaner.debug.xcconfig"; sourceTree = "<group>"; };
-		4938270520B4181B00E0EEB8 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		496AB6FF20B31F4C000FF8E0 /* DownloadCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		496AB70220B31F4C000FF8E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		496AB70420B31F4E000FF8E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				496AB70420B31F4E000FF8E0 /* Assets.xcassets */,
 				496AB70620B31F4E000FF8E0 /* MainMenu.xib */,
 				496AB72C20B32495000FF8E0 /* StatusMenuController.swift */,
-				4938270520B4181B00E0EEB8 /* Podfile */,
 				496AB70920B31F4E000FF8E0 /* Info.plist */,
 			);
 			path = DownloadCleaner;
@@ -148,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4938270620B4181B00E0EEB8 /* Podfile in Resources */,
 				496AB70520B31F4E000FF8E0 /* Assets.xcassets in Resources */,
 				496AB70820B31F4E000FF8E0 /* MainMenu.xib in Resources */,
 			);
