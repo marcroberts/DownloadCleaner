@@ -31,8 +31,8 @@ class StatusMenuController: NSObject {
         
         let activity = NSBackgroundActivityScheduler(identifier: "DownloadCleaner.DeleteTask")
         activity.repeats = true
-        activity.interval = 60 * 60
-        activity.tolerance = 10 * 60
+        activity.interval = 240 * 60
+        activity.tolerance = 60 * 60
         
         activity.schedule() { (completion: NSBackgroundActivityScheduler.CompletionHandler) in
             
