@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DownloadCleaner Release Notes</title>
+</head>
+<body>
+	<h1>DownloadCleaner Release Notes</h1>
+	
+	{% for release in site.github.releases %}
+	    {% unless release.draft %}
+	        {% unless release.prerelease and page.release_only %}
+					  <h2>{{ release.name }}</h2>
+
+	          {{ release.body | markdownify }}
+
+	        {% endunless %}
+	    {% endunless %}
+	{% endfor %}
+</body>
+</html>
