@@ -7,5 +7,6 @@ target 'DownloadCleaner' do
   
   # Pods for DownloadCleaner
   pod 'Sparkle'
+  pod 'LoginServiceKit', :git => 'https://github.com/Clipy/LoginServiceKit.git'
 
 end

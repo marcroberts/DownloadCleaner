@@ -1,16 +1,28 @@
 PODS:
+  - LoginServiceKit (1.2.0)
   - Sparkle (1.18.1)
 
 DEPENDENCIES:
+  - LoginServiceKit (from `https://github.com/Clipy/LoginServiceKit.git`)
   - Sparkle
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Sparkle
 
+EXTERNAL SOURCES:
+  LoginServiceKit:
+    :git: https://github.com/Clipy/LoginServiceKit.git
+
+CHECKOUT OPTIONS:
+  LoginServiceKit:
+    :commit: 8011c1f5fc00bfaab78d3d673eec8c35ed5289ad
+    :git: https://github.com/Clipy/LoginServiceKit.git
+
 SPEC CHECKSUMS:
+  LoginServiceKit: 4e51d3007cd6fc1d0453ba98c3328fcf06fa27c1
   Sparkle: 06ea33170007c5937ee54da481b4481af98fac79
 
-PODFILE CHECKSUM: 66e17cab495901a9fc8e75dd27d35bd6755ff387
+PODFILE CHECKSUM: 55d1ecb8924e47e4a171614754663c417d5503d3
 
 COCOAPODS: 1.5.2

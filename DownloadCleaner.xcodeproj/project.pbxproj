@@ -16,6 +16,8 @@
 
 /* Begin PBXFileReference section */
 		1E7078FE409A4B50B8F49A47 /* Pods-DownloadCleaner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadCleaner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadCleaner/Pods-DownloadCleaner.debug.xcconfig"; sourceTree = "<group>"; };
+		4923FC2220B5CE9A0000ECF6 /* DownloadCleanerLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadCleanerLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4923FC3420B5CF040000ECF6 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		496AB6FF20B31F4C000FF8E0 /* DownloadCleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadCleaner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		496AB70220B31F4C000FF8E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		496AB70420B31F4E000FF8E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,6 +29,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4923FC1F20B5CE9A0000ECF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		496AB6FC20B31F4C000FF8E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,6 +50,7 @@
 		3DD3842F4E16C0A2B991AE2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4923FC3420B5CF040000ECF6 /* ServiceManagement.framework */,
 				8F79A1BBE7C90774E7BA0A22 /* Pods_DownloadCleaner.framework */,
 			);
 			name = Frameworks;
@@ -60,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				496AB6FF20B31F4C000FF8E0 /* DownloadCleaner.app */,
+				4923FC2220B5CE9A0000ECF6 /* DownloadCleanerLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +99,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4923FC2120B5CE9A0000ECF6 /* DownloadCleanerLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4923FC3120B5CE9B0000ECF6 /* Build configuration list for PBXNativeTarget "DownloadCleanerLauncher" */;
+			buildPhases = (
+				4923FC1E20B5CE9A0000ECF6 /* Sources */,
+				4923FC1F20B5CE9A0000ECF6 /* Frameworks */,
+				4923FC2020B5CE9A0000ECF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DownloadCleanerLauncher;
+			productName = DownloadCleanerLauncher;
+			productReference = 4923FC2220B5CE9A0000ECF6 /* DownloadCleanerLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		496AB6FE20B31F4C000FF8E0 /* DownloadCleaner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 496AB72320B31F4E000FF8E0 /* Build configuration list for PBXNativeTarget "DownloadCleaner" */;
@@ -117,6 +145,14 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = hiyacar;
 				TargetAttributes = {
+					4923FC2120B5CE9A0000ECF6 = {
+						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
 					496AB6FE20B31F4C000FF8E0 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -136,11 +172,19 @@
 			projectRoot = "";
 			targets = (
 				496AB6FE20B31F4C000FF8E0 /* DownloadCleaner */,
+				4923FC2120B5CE9A0000ECF6 /* DownloadCleanerLauncher */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4923FC2020B5CE9A0000ECF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		496AB6FD20B31F4C000FF8E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,11 +222,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DownloadCleaner/Pods-DownloadCleaner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LoginServiceKit/LoginServiceKit.framework",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework",
 				"${PODS_ROOT}/Sparkle/Sparkle.framework.dSYM",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LoginServiceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sparkle.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Sparkle.framework.dSYM",
 			);
@@ -194,6 +240,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4923FC1E20B5CE9A0000ECF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		496AB6FB20B31F4C000FF8E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +270,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4923FC2F20B5CE9B0000ECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C777S4J8Y9;
+				INFOPLIST_FILE = DownloadCleanerLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.marcroberts.DownloadCleanerLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		4923FC3020B5CE9B0000ECF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C777S4J8Y9;
+				INFOPLIST_FILE = DownloadCleanerLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.marcroberts.DownloadCleanerLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		496AB72120B31F4E000FF8E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,6 +470,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4923FC3120B5CE9B0000ECF6 /* Build configuration list for PBXNativeTarget "DownloadCleanerLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4923FC2F20B5CE9B0000ECF6 /* Debug */,
+				4923FC3020B5CE9B0000ECF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		496AB6FA20B31F4C000FF8E0 /* Build configuration list for PBXProject "DownloadCleaner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
