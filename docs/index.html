@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 <!doctype html>
 <html>
   <head>
@@ -17,11 +20,16 @@
         <h1>DownloadCleaner</h1>
         <p>A tool for cleaning out your Downloads folder</p>
         <p class="view"><a href="http://github.com/marcroberts/DownloadCleaner">View the Project on GitHub <small>marcroberts/DownloadCleaner</small></a></p>
-        <ul>
-          <li><a href="https://github.com/marcroberts/DownloadCleaner/releases/download/v1.0.3/DownloadCleaner.v1.0.3.zip">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/marcroberts/DownloadCleaner/releases/download/v1.0.3/DownloadCleaner.pkg">Download <strong>Installer</strong></a></li>
-          <li><a href="http://github.com/marcroberts/DownloadCleaner">Fork On <strong>GitHub</strong></a></li>
-        </ul>
+        {% for release in site.github.releases limit:1 %}
+          {% for asset in release.assets limit:1 %}
+            {% assign tag = release.tag_name %}
+		        <ul>
+		          <li><a href="https://github.com/marcroberts/DownloadCleaner/releases/download/{{ tag }}/DownloadCleaner.{{ tag }}.zip">Download <strong>ZIP File</strong></a></li>
+		          <li><a href="https://github.com/marcroberts/DownloadCleaner/releases/download/{{ tag }}/DownloadCleaner.pkg">Download <strong>Installer</strong></a></li>
+		          <li><a href="http://github.com/marcroberts/DownloadCleaner">Fork On <strong>GitHub</strong></a></li>
+		        </ul>
+          {% endfor %}
+        {% endfor %}
       </header>
       <section>
         <h1>DownloadCleaner</h1>
